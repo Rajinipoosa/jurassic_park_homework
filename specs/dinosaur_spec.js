@@ -1,10 +1,14 @@
 var assert = require("assert");
 var Dinosaur = require("../dinosaur.js");
 
-describe("Dinosaur",function(){
+describe("Dinosaur", function(){
+  var dinosaur;
 
   beforeEach(function(){
-    this.dinosaur = new Dinosaur("Tyrannosaurus",2);
+    dinosaur = new Dinosaur( { type: "Tyrannosaurus",offspring: 2 });
 });
-
+ 
+ it('should have a type', function () {
+  assert.strictEqual('Tyrannosaurus', dinosaur.type);
+ });
 });
